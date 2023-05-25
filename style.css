@@ -201,16 +201,20 @@ body{
     position:relative;
     margin-top:0px;
     margin-left:15%;
+    width:40%;
 }
 .about-img img{
-    width:100%;
-    height:auto;
-    object-fit: contain;
+    width:auto;
+    height:100%;
+    position:absolute;
+    bottom:0;
+    left:10%;
 }
 .about-aboutme{
     position:relative;
-    width:100%;
+    width:60%;
     text-align:center;
+    padding-bottom:80px;
 }
 .tittle-of-section{
     color:var(--main);
@@ -234,4 +238,5 @@ body{
     color:var(--white50);
     margin:0 auto;
     font-size:21px;
+    padding-bottom:80px;
 }
