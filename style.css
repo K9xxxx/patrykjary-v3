@@ -38,7 +38,7 @@ body{
 
 .content{
     width:100%;
-    height:3000px;
+    height:auto;
     overflow: overlay;
     background-size: 200vw;
 }
@@ -252,7 +252,7 @@ body{
     background-color: var(--Dark-main);
     padding:128px 90px;
 }
-.specs-flex-box1-2{
+.specs-flex-box1-and2{
     display:flex;
     justify-content: space-around;
 }
@@ -272,9 +272,7 @@ body{
     height:200px;
 }
 .spec-box:nth-child(4){
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:80px;;
+    margin:80px auto 40px;
 }
 .spec-box h3{
     color:var(--secound);
@@ -303,7 +301,7 @@ body{
     border:1px solid red;
 }
 .tools-content{
-    
+    position:relative;
 }
 .tools-type-flex{
     width:600px;
@@ -314,12 +312,20 @@ body{
     position:relative;
     margin:0 auto;
     justify-content: space-around;
-    z-index:1!important;
+    z-index:1 !important;
 }
 .tools-content div{
+    width:600px;
+    border:1px solid red;
+    z-index:5 !important;
+}
+.tools-content-flex div{
     width:40%;
     border:1px solid red;
-    z-index:5!important;
+}
+.tools-content div p{
+    color:#fff;
+    z-index:7 !important;
 }
 .active-tool{
     position:absolute;
@@ -328,7 +334,16 @@ body{
     width:300px;
     height:300px;
     background-color: yellow;
-    margin-top:-95px;
-    margin-left:-95px;
+    margin-top:-150px;
+    margin-left:-150px;
     z-index:3 !important;
+}
+
+
+
+.short-contact{
+    width:100%;
+    height:500px;
+    border:1px solid purple;
+    background: var(--Dark-main);
 }
