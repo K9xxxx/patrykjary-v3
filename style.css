@@ -39,8 +39,8 @@ body{
 .content{
     width:100%;
     height:auto;
-    overflow: overlay;
-    position:relative;
+    background-size: 100vw;
+    overflow:overlay;
 }
 .desk-nav{
     width:100%;
@@ -520,6 +520,7 @@ body{
     margin:0 auto;
     width:fit-content;
     height:fit-content;
+    margin-bottom:200px;
 }
 .more-realization a{
     padding:16px 32px !important;
@@ -527,6 +528,7 @@ body{
 }
 .more-realization-content{
     display:flex;
+    padding:16px 32px;
 
 }
 .more-realization-content{
