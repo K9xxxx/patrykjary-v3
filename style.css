@@ -6,21 +6,6 @@
     text-decoration:none;
 }
 
-::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
-}
-body::-webkit-scrollbar-track {
-    background: transparent;
-}
-body::-webkit-scrollbar-thumb {
-    background: hsl(0, 0%, 15%);
-    border-radius: 20px;
-    transition:all .3s ease-in-out;
-}
-body::-webkit-scrollbar-thumb:hover {
-    background: var(--main)
-}
 :root{
     --main:#32CBCC;
     --secound:#2DB3E3;
@@ -32,16 +17,6 @@ body::-webkit-scrollbar-thumb:hover {
     --white5:hsla(0,0%,100%,0.05);
 }
 
-body{
-    overflow: overlay;
-}
-
-.content{
-    width:100%;
-    height:auto;
-    background-size: 100vw;
-    overflow:overlay;
-}
 .desk-nav{
     width:100%;
     padding:24px 0px;
