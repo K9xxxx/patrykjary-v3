@@ -62,7 +62,7 @@
                         <div class="btn-poznajmy-sie">
                             <a class="btn-poznajmy-sie-a" href="#">
                                 <p>Poznajmy sie</p>
-                                <img src="./img/arrow-down.svg" alt="">
+                                <i class="icofont-arrow-down"></i>
                             </a>
                         </div>
                     </div>
@@ -352,6 +352,24 @@
                         <h6>Formularz kontaktowy</h6>
                         <div class="ornament-div-contact"></div>
                     </div>
+                    <form action="">
+                        <div class="form-box name-box">
+                            <input id="id-name" placeholder="Imię*" name="name" type="text" required>
+                            <h2 id="result-neg-mail"></h2>
+                        </div>
+                        <div class="form-box mail-box">
+                            <input id="id-mail" placeholder="Adres e-mail*" name="emailu" type="text" required>
+                            <h2 id="result-neg-mail"></h2>
+                        </div>
+                        <div class="form-box phone-box">
+                            <input id="id-phone" placeholder="Numer telefonu" name="phone" type="text" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                            <h2 id="result-neg-mail"></h2>
+                        </div>
+                        <div class="form-box message-box">
+                            <textarea placeholder="Treść wiadomości" name="message" id="" cols="100" rows="12" min="5"></textarea>
+                        </div>
+                        <input type="checkbox" value="Wyrażam zgodę na przetwarzanie przez Agencja Interaktywna Mateusz Wtorek (NIP: 6783031036) moich danych osobowych, zawartych w formularzu kontaktowym, w celu udzielenia odpowiedzi na przesłane przeze mnie zapytanie." tabindex>
+                    </form>
                 </div>
             </div>
         </div>
@@ -366,10 +384,22 @@
                 <p>Tworzenie stron internetowych bez korzystania z szablonów, indywidualne podejście do każdego projektu, Poprawianie widoczności stron w wyszukiwarce.
                 </p>
                 <div class="footer-nav">
-                    <a class="active" href="">Strona główna</a>
-                    <a href="">O mnie</a>
-                    <a href="">Realizacje</a>
-                    <a href="">Kontakt</a>
+                    <div class="footer-anchor active">
+                        <a href="">Strona główna</a>
+                        <div class="underscore-active"></div>
+                    </div>
+                    <div class="footer-anchor">
+                        <a href="">O mnie</a>
+                        <div class="underscore-active"></div>
+                    </div>
+                    <div class="footer-anchor">
+                        <a href="">Realizacje</a>
+                        <div class="underscore-active"></div>
+                    </div>
+                    <div class="footer-anchor">
+                        <a href="">Kontakt</a>
+                        <div class="underscore-active"></div>
+                    </div>
                 </div>
                 <a class="policy"href="">Polityka prywatności</a>
                 <p class="rights">© 2023. All Rights Reserved.</p>

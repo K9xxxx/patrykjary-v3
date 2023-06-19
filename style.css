@@ -137,6 +137,10 @@ body{
     margin:0 auto;
     z-index:11;
     position:relative;
+    transition:all .3s ease-in-out;
+}
+.btn-poznajmy-sie:hover{
+    box-shadow: 0px 0px 10px var(--main);
 }
 .btn-poznajmy-sie-a{
     padding:16px 32px;
@@ -149,11 +153,16 @@ body{
     text-align: center;
     text-shadow:2px 2px 2px black;
 }
-.btn-poznajmy-sie-a img{
-    width:24px;
-    height:24px;
-    align-self: center;
-    margin-left:8px;
+.btn-poznajmy-sie-a i{
+    font-size:24px;
+    color:#fff;
+    margin-left:16px;
+    margin-top:5px;
+    font-weight: 100;
+    transition:all .3s ease-in-out;
+}
+.btn-poznajmy-sie:hover i{
+    transform: translateY(5px)
 }
 
 
@@ -221,7 +230,12 @@ body{
     color:var(--white50);
     margin:0 auto;
     font-size:21px;
-    padding-bottom:80px;
+    margin-bottom:80px;
+    transition:color .3s ease-in-out;
+}
+.about-aboutme a:hover{
+    color:#fff;
+    
 }
 
 
@@ -571,7 +585,7 @@ body{
 
 }
 .more-realization-content{
-    color:var(--white50);
+    color:var(--white75);
     transition:all .3s ease-in-out;
 }
 
@@ -580,7 +594,7 @@ body{
     width:25px;
     height:25px;
     border-radius:100%;
-    border:1px solid var(--white50);
+    border:1px solid var(--white75);
     margin-left:8px;
     transition:all .3s ease-in-out;
 }
@@ -599,7 +613,7 @@ body{
 }
 .more-realization-content:hover{
     color:#fff;
-    box-shadow:0px 0px 3px var(--main);
+    box-shadow:0px 0px 10px var(--main);
 }
 .more-realization-content:hover>.icon{
     border:1px solid #fff;
@@ -634,11 +648,16 @@ body{
     color:#fff;
 }
 .faq-about a{
-    border:1px solid var(--secound);
+    border:1px solid var(--main);
     padding:16px 32px;
     border-radius:32px;
-    color:var(--secound);
+    color:var(--main);
     font-size:21px;
+    transition:all .3s ease-in-out;
+}
+.faq-about a:hover{
+    box-shadow:0px 0px 10px var(--main);
+    text-shadow:1px 1px 1px var(--white25);
 }
 .faq-qa{
     width: 60%;
@@ -706,6 +725,7 @@ body{
 }
 .contact-form{
     width:60%;
+    position:relative;
 }
 .possibility-contact{
     width:fit-content;
@@ -738,6 +758,9 @@ body{
     font-size:18px;
     transition:color .3s ease-in-out;
 }
+.type-of-contact i{
+    padding-top:3px;
+}
 .type-of-contact a{
     margin-left:8px;
 }
@@ -746,6 +769,57 @@ body{
 }
 .type-of-contact a:hover~i{
     color:var(--secound)
+}
+
+form{
+    width:50%;
+    margin:16px auto 0;
+    position:relative;
+}
+.form-box{
+    margin:16px auto 0;
+    text-align: center;
+    margin-top:8px;
+}
+
+.form-box input{
+    margin:0 auto;
+    width:100%;
+    font-size:18px;
+    padding:8px 16px;
+    border-radius: 8px;
+    border:1px solid var(--white50);
+    color: var(--white50);
+    background: var(--Dark-main);
+    outline: none;
+}
+.form-box input:focus{
+    border:1px solid var(--secound);
+    color:var(--secound) ;
+}
+.form-box textarea{
+    width:100%;
+    border:1px solid var(--white50);
+    background:var(--Dark-main);
+    font-size:18px;
+    padding:8px 16px;
+    border-radius: 8px;
+    outline:none;
+    color:var(--white50);
+}
+.form-box textarea{
+    max-width:100%;
+    border:1px solid var(--white50);
+    background:var(--Dark-main);
+    font-size:18px;
+    padding:8px 16px;
+    border-radius: 8px;
+    outline:none;
+    color:var(--white50);
+}
+.form-box textarea:focus{
+    border:1px solid var(--secound);
+    color:var(--secound);
 }
 
 /* Footer */
@@ -783,19 +857,31 @@ footer{
     width:fit-content;
     margin:64px auto 24px;
 }
-.footer-nav a{
+.footer-anchor{
     margin-left:16px;
+    width:fit-content;
+}
+.footer-anchor:nth-child(5){
+    margin-left:0px;
+}
+.footer-anchor.active .underscore-active{
+    width:100%;
+    height:1px;
+    background: #32CBCC;
+    margin-top:4px;
+}
+.footer-anchor a{
     color:#fff;
     transition:color .3s ease-in-out;
     font-size:18px;
 }
-.footer-nav a.active{
+.footer-anchor.active a{
     color:var(--main);
 }
-.footer-nav a:hover{
+.footer-anchor a:hover{
     color:var(--main);
 }
-.footer-nav a:nth-child(5){
+.footer-anchor a:nth-child(5){
     margin-left:0px;
 }
 
