@@ -248,6 +248,24 @@ body{
     font-size:84px;
     text-align: center;
     margin-bottom:80px;
+    transition:all .3s ease-in-out;
+}
+.aboutme .tittle-of-section{
+    transform: translateY(-50px);
+}
+.my-specializations .tittle-of-section,
+.realization .tittle-of-section{
+    transform: translateY(0px);
+}
+.faq-section .tittle-of-section{
+    transform: translateX(-50px);
+}
+
+
+.tittle-of-section.active-tittle{
+    opacity:1 !important;
+    transform: translateY(0px);
+    transform: translateX(0px);
 }
 .about-aboutme p{
     color:hsla(0,0%,100%,0.75);
@@ -941,4 +959,38 @@ footer{
     color:var(--white75);
     font-size:15px;
     margin-top:24px;
+}
+
+@media only screen and (max-width:1667px){
+    .project {
+        margin: 0 5%;
+    }
+    .header-content-abs {
+        width: 70%;
+        margin-left: -35%;
+    }
+    .about-img img {
+        left: 5%;
+    }
+    .about-img {
+        margin-left: 5%;
+    }
+    .spec-box.spec-box-flex {
+        width: 500px;
+        height: 300px;
+    }
+    .spec-box p {
+        color: #fff;
+        font-size: 25px;
+        text-align: center;
+        margin: 36px 32px 0px;
+        line-height: 35px;
+    }
+    
+}
+
+
+
+@media only screen and (max-width:1300px){
+
 }
