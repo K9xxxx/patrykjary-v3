@@ -986,11 +986,76 @@ footer{
         margin: 36px 32px 0px;
         line-height: 35px;
     }
+    .faq-section .tittle-of-section {
+        width: 70%;
+    }
     
 }
 
 
 
 @media only screen and (max-width:1300px){
+    .header-text2 h1 {
+        font-size: 64px;
+    }
+    .about-img {
+        margin-left: 0%;
+    }
+    .about-img img {
+        width: 70%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0%;
+    }
+    .specs-flex-box1-and2 {
+        flex-direction: column;
+    }
+    .spec-box.spec-box-flex {
+        margin:40px auto 0;
+    }
+    .square-ornament-absolute {
+        left: 0px;
+        width: 70px !important;
+        height: 70px !important;
+    }
+    .square-ornament-relative {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    .square-ornament-relative.SOR-small{
+        width: 50px !important;
+        height: 50px !important;
+        margin-left: -25px;
+        margin-top: -25px;
+    }
+    .sc-call-mail {
+        display: flex;
+        width: 85%;
+    }
+    .sc-call, .sc-mail {
+        width: auto;
+    }
+    .project {
+        margin: 64px 5% 0px;
+    }
+    .project:nth-child(3) {
+        margin-top: 64px;
+    }
+    .faq-section .tittle-of-section {
+        width: 95%;
+    }
+    .faq-about-content p {
+        font-size: 24px;
+    }
+    .all-types-contacts {
+        margin-left: 5%;
+    }
+    form {
+        width: 70%;
+    }
+    .footer-content {
+        width: 50%;
+    }
 
 }
