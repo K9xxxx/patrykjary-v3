@@ -1059,3 +1059,37 @@ footer{
     }
 
 }
+@media only screen and (max-width:1000px){
+    .desk-nav-mar {
+    margin: 0 45px;
+}
+    .desk-nav.active-nav .nav-anchor {
+    margin: 0 16px;
+}
+.header-content-abs {
+    width: 90%;
+    margin-left: -45%;
+}
+.aboutme-content-flex {
+    flex-direction:column;
+}
+.orna-aboutme {
+    display:none;
+}
+.about-aboutme {
+    width: 100%;
+}
+.tittle-of-section {
+    font-size: 64px;
+}
+.spec-box.spec-box-flex {
+    width: 100%;
+}
+.spec-box:nth-child(3) {
+    height: 300px;
+}
+.spec-box:nth-child(4) {
+    margin: 0px auto 0px;
+    width:100%;
+}
+}
