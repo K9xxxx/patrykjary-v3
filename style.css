@@ -1070,6 +1070,9 @@ footer{
     width: 90%;
     margin-left: -45%;
 }
+.aboutme-content {
+    padding-top:80px;
+}
 .aboutme-content-flex {
     flex-direction:column;
 }
@@ -1092,4 +1095,113 @@ footer{
     margin: 0px auto 0px;
     width:100%;
 }
+.square-ornament-relative {
+    width: 40px !important;
+    height: 40px !important;
+}
+.square-ornament-relative.SOR-small {
+    width: 30px !important;
+    height: 30px !important;
+    margin-left: -15px;
+    margin-top: -15px;
+}
+.square-ornament-absolute {
+    left: -60px;
+    width: 40px !important;
+    height: 40px !important;
+}
+.sc-call-mail {
+    width: 90%;
+}
+.short-contact h3 {
+    font-size: 40px;
+}
+.short-contact h4 {
+    font-size: 32px;
+}
+.faq-content {
+    flex-direction:column;
+}
+.faq-about {
+    width: 100%;
+    display:flex;
+}
+.faq-qa {
+    width: 100%;
+    margin: 64px 0px 32px 0px;
+}
+.faq-about-content {
+    width:50%;
+    margin-bottom: 0px;
+}
+.faq-about-a{
+    width:50%;
+    position: relative;
+    text-align: center;
+    margin-top:16px;
+}
+.faq-about a {
+    color: var(--white75);
+}
+.possibility-of-contacts {
+    flex-direction: column;
+}
+.all-types-contacts {
+    width: fit-content;
+    margin-left: 0%;
+    margin: 0 auto;
+}
+.contact-form {
+    width: 100%;
+    position: relative;
+    margin:64px 0px 0px 0px;
+}
+
+}
+
+@media only screen and (max-width:800px){
+    .desk-nav{
+        display:none;
+    }
+    .navigation-mobile{
+        border:1px solid red;
+        position:fixed;
+        top:-250px;
+        left:50%;
+        margin-left:-140px;
+    }
+    .navigation-mobile-content-rel{
+        position:relative;
+    }
+    .navigation-mobile-content{
+        transform: rotate(45deg);
+        border:1px solid blue
+    }
+    .navigation-mobile-anchors{
+        border:1px solid var(--main);
+        width:280px;
+        height:280px;
+        position:relative;
+        background:var(--light-Dark);
+    }
+    .navigation-mobile-anchors > *{
+        transform:rotate(-45deg);
+    }
+    .mobile-anchor{
+        width:fit-content;
+        margin:0 auto;
+        display:flex;
+        border:1px solid red;
+    }
+    .mobile-anchor a{
+        color:#fff;
+        font-size:20px;
+    }
+    .test{
+        border:1px solid green;
+        width:fit-content;
+        top:50%;
+        position:absolute;
+        left:50%;
+    }
 }
