@@ -1164,18 +1164,24 @@ footer{
         display:none;
     }
     .navigation-mobile{
-        border:1px solid red;
         position:fixed;
-        top:-250px;
-        left:50%;
-        margin-left:-140px;
+        top:0px;
+        left:0%;
+        width:100%;
     }
     .navigation-mobile-content-rel{
         position:relative;
+        width:fit-content;
+        margin:0 auto;
     }
     .navigation-mobile-content{
         transform: rotate(45deg);
-        border:1px solid blue
+        border:1px solid blue;
+        margin-top:-141px;
+        transition: .3s ease;
+    }
+    .navigation-mobile-content.active{
+        margin-top:-141px;
     }
     .navigation-mobile-anchors{
         border:1px solid var(--main);
@@ -1189,19 +1195,25 @@ footer{
     }
     .mobile-anchor{
         width:fit-content;
-        margin:0 auto;
+        margin:8px auto 0;
         display:flex;
-        border:1px solid red;
     }
     .mobile-anchor a{
         color:#fff;
         font-size:20px;
+        font-weight:400;
     }
     .test{
-        border:1px solid green;
         width:fit-content;
-        top:50%;
+        top:calc(50% - 8px);
         position:absolute;
-        left:50%;
+        left: calc(50% + 18px);
+    }
+    .mobile-orna-wall.wall-active{
+        width:2px;
+        min-height:100%;
+        background-color: var(--main);
+        margin-right:4px;
+
     }
 }
