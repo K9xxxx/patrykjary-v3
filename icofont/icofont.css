@@ -38,11 +38,6 @@ url("./fonts/icofont.woff") format("woff");
   content: "\ea5d";
 }
 
-.icofont-arrow-down:before
-{
-  content: "\ea5b";
-}
-
 .icofont-location-arrow:before
 {
   content: "\ef78";
@@ -66,6 +61,21 @@ url("./fonts/icofont.woff") format("woff");
 .icofont-twitter:before
 {
   content: "\ed7a";
+}
+
+.icofont-arrow-down:before
+{
+  content: "\ea5b";
+}
+
+.icofont-navigation-menu:before
+{
+  content: "\efa2";
+}
+
+.icofont-close:before
+{
+  content: "\eee4";
 }
 
 [class^="icofont-"].icofont-duotone,

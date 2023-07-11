@@ -641,6 +641,8 @@ body{
 .more-realization-content{
     color:var(--white75);
     transition:all .3s ease-in-out;
+    justify-content: center;
+    align-items: center;
 }
 
 .more-realization-content .icon{
@@ -726,6 +728,8 @@ body{
 }
 .qa-question{
     display:flex;
+    justify-content: center;
+    align-items: center;
 
 }
 .qa-title{
@@ -1125,6 +1129,8 @@ footer{
 .faq-about {
     width: 100%;
     display:flex;
+    justify-content: center;
+    align-items: center;
 }
 .faq-qa {
     width: 100%;
@@ -1138,7 +1144,7 @@ footer{
     width:50%;
     position: relative;
     text-align: center;
-    margin-top:16px;
+    margin-top:0px;
 }
 .faq-about a {
     color: var(--white75);
@@ -1156,6 +1162,10 @@ footer{
     position: relative;
     margin:64px 0px 0px 0px;
 }
+.faq-section {
+    margin: 0px 90px;
+    padding-bottom: 120px;
+}
 
 }
 
@@ -1168,9 +1178,9 @@ footer{
         top:0px;
         left:0%;
         width:100%;
+        z-index:20;
     }
     .navigation-mobile-content-rel{
-        position:relative;
         width:fit-content;
         margin:0 auto;
     }
@@ -1179,9 +1189,10 @@ footer{
         border:1px solid blue;
         margin-top:-141px;
         transition: .3s ease;
+        z-index:99 !important;
     }
     .navigation-mobile-content.active{
-        margin-top:-141px;
+        margin-top:-280px;
     }
     .navigation-mobile-anchors{
         border:1px solid var(--main);
@@ -1189,6 +1200,7 @@ footer{
         height:280px;
         position:relative;
         background:var(--light-Dark);
+        z-index: 20 !important;
     }
     .navigation-mobile-anchors > *{
         transform:rotate(-45deg);
@@ -1197,6 +1209,8 @@ footer{
         width:fit-content;
         margin:8px auto 0;
         display:flex;
+        justify-content: center;
+        align-items: center;
     }
     .mobile-anchor a{
         color:#fff;
@@ -1207,13 +1221,138 @@ footer{
         width:fit-content;
         top:calc(50% - 8px);
         position:absolute;
-        left: calc(50% + 18px);
+        left: calc(50% + 8px);
     }
-    .mobile-orna-wall.wall-active{
-        width:2px;
-        min-height:100%;
+    .mobile-anchor.active-anchor .mobile-orna-wall{
+        width:3px;
+        height:20px;
         background-color: var(--main);
         margin-right:4px;
-
     }
+    .mobile-anchor.active-anchor a{
+        color:var(--secound);
+    }
+    .navigation-mobile-icons{
+        border:1px solid red;
+        top:20px;
+        position:absolute;
+        right:20px;
+        z-index:99 !important;
+    }
+    .navigation-btn,
+    .close-btn{
+        width:30px;
+        height:30px;
+        display:none;
+        opacity:0;
+        transition:.3s ease;
+    }
+    .navigation-btn.nav-active,
+    .close-btn.nav-active{
+        display:inline;
+        opacity:1;
+        transition:.3s ease;
+    }
+    .navigation-btn >img,
+    .close-btn>img{
+        width:30px;
+        height:30px;
+    }
+    .close-btn{
+        top:50px;
+        position:absolute;
+        right:0px;
+    }
+    .header-text1 h2 {
+        font-size: 48px;
+        margin-bottom: 32px;
+    }
+    .header-text2 h1 {
+        font-size: 50px;
+    }
+    .header-text3 p {
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+    .about-aboutme p {
+        font-size: 21px;
+        width: 100%;
+        margin: 0 auto 32px;
+    }
+    .my-specializations {
+        padding: 128px 48px;
+    }
+    .spec-box{
+        width:100%;
+        height:auto !important;
+        padding-bottom:32px;
+    }
+    .tools-content div {
+        width: 400px;
+        z-index: 5 !important;
+    }
+    .active-tool {
+        width:200px  !important;
+        height:200px  !important;
+        margin-top: -50px;
+        margin-left: -30px;
+    }
+    .tools-content div p {
+        font-size: 18px;
+    }
+    .sc-call-mail {
+        width: 90%;
+        flex-direction:column;
+        margin-bottom:16px;
+    }
+    .sc-mail{
+        margin-top:16px;
+        margin:16px 0px;
+    }
+    .faq-about {
+        flex-direction: column;
+        text-align: left;
+        align-items: start;
+    }
+    .faq-about-a {
+        width: 70%;
+        margin-top:48px;
+        text-align: left;
+        
+    }
+    .faq-about-content {
+        width: 70%;
+        margin-bottom: 0px;
+    }
+    .faq-section {
+        margin: 0px 40px;
+        padding-bottom: 120px;
+    }
+    .contact-front-section {
+        margin: 0 40px;
+        padding-bottom: 80px; 
+    }
+    .type-of-contact {
+        margin:16px auto 0;
+    }
+    .footer-content {
+        width: 70%;
+    }
+    .footer-content h3 {
+        color: #fff;
+        font-size: 30px;
+        margin-top: 32px;
+    }
+    .footer-content p {
+        color: var(--white75);
+        font-size: 24px;
+        margin-top: 32px;
+    }
+    .realization-content {
+        margin: 45px auto 90px;
+    }
+}
+
+@media only screen and (max-width:600px){
+
 }
