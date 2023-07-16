@@ -1,4 +1,7 @@
 let tittleOfSection=document.querySelectorAll('.tittle-of-section')
+let NavigationMobile=document.querySelector('.navigation-mobile-content')
+let navigationBtn=document.querySelector('.navigation-btn img')
+let closeBtn=document.querySelector('.close-btn')
 
 
 
@@ -34,5 +37,16 @@ $(document).ready(function(){
         .setClassToggle(this,'active-tittle')
         .addTo(controller);
     })
+
+    navigationBtn.addEventListener('click',()=>{
+        if (NavigationMobile.classList.contains('active')!==false){
+            navigationBtn.classList.add('active')
+        }
+        else{
+            console.log('ij')
+        }
+            
+    })
+
 
 });
