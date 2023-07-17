@@ -19,6 +19,7 @@
 
 body{
     background: var(--Dark-main);
+    overflow: hidden;
 }
 
 
@@ -1187,12 +1188,12 @@ footer{
     .navigation-mobile-content{
         transform: rotate(45deg);
         border:1px solid blue;
-        margin-top:-141px;
+        margin-top:-280px;
         transition: .3s ease;
         z-index:99 !important;
     }
     .navigation-mobile-content.active{
-        margin-top:-280px;
+        margin-top:-141px;
     }
     .navigation-mobile-anchors{
         border:1px solid var(--main);
@@ -1233,25 +1234,30 @@ footer{
         color:var(--secound);
     }
     .navigation-mobile-icons{
-        border:1px solid red;
         top:20px;
         position:absolute;
         right:20px;
         z-index:99 !important;
     }
-    .navigation-btn,
+    .navigation-btn{
+        width:30px;
+        min-height:30px !important;
+        display:none;
+        opacity:1;
+        transition: all .3s ease-in-out;
+    }
     .close-btn{
         width:30px;
         height:30px;
         display:none;
         opacity:0;
-        transition:.3s ease;
+        transition: all .3s ease-in-out;
     }
     .navigation-btn.nav-active,
     .close-btn.nav-active{
-        display:inline;
+        display:inherit;
         opacity:1;
-        transition:.3s ease;
+        transition: all .3s ease-in-out;
     }
     .navigation-btn >img,
     .close-btn>img{

@@ -1,6 +1,6 @@
 let tittleOfSection=document.querySelectorAll('.tittle-of-section')
-let NavigationMobile=document.querySelector('.navigation-mobile-content')
-let navigationBtn=document.querySelector('.navigation-btn img')
+let navigationMobile=document.querySelector('.navigation-mobile-content')
+let navigationBtn=document.querySelector('.navigation-btn')
 let closeBtn=document.querySelector('.close-btn')
 
 
@@ -39,11 +39,24 @@ $(document).ready(function(){
     })
 
     navigationBtn.addEventListener('click',()=>{
-        if (NavigationMobile.classList.contains('active')!==false){
-            navigationBtn.classList.add('active')
+        if (navigationMobile.classList.contains('active')!==true){
+            navigationBtn.classList.remove('nav-active')
+            navigationMobile.classList.add('active')
+            closeBtn.classList.add('nav-active')
         }
         else{
-            console.log('ij')
+            return 0;
+        }
+            
+    })
+    closeBtn.addEventListener('click',()=>{
+        if (navigationMobile.classList.contains('active')===true){
+            navigationBtn.classList.add('nav-active')
+            navigationMobile.classList.remove('active')
+            closeBtn.classList.remove('nav-active')
+        }
+        else{
+            return 0;
         }
             
     })
