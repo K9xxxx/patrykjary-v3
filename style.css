@@ -19,7 +19,7 @@
 
 body{
     background: var(--Dark-main);
-    overflow: hidden;
+    max-width:100vw;
 }
 
 
@@ -1187,13 +1187,12 @@ footer{
     }
     .navigation-mobile-content{
         transform: rotate(45deg);
-        border:1px solid blue;
         margin-top:-280px;
         transition: .3s ease;
         z-index:99 !important;
     }
     .navigation-mobile-content.active{
-        margin-top:-141px;
+        margin-top:-145px;
     }
     .navigation-mobile-anchors{
         border:1px solid var(--main);
@@ -1212,6 +1211,11 @@ footer{
         display:flex;
         justify-content: center;
         align-items: center;
+        opacity:0;
+        transition:all .4s ease-in-out;
+    }
+    .navigation-mobile-content.active .test .mobile-anchor{
+        opacity:1;
     }
     .mobile-anchor a{
         color:#fff;
@@ -1265,7 +1269,7 @@ footer{
         height:30px;
     }
     .close-btn{
-        top:50px;
+        top:0px;
         position:absolute;
         right:0px;
     }
@@ -1357,8 +1361,263 @@ footer{
     .realization-content {
         margin: 45px auto 90px;
     }
+    .navigation-mobile-socials{
+        width:50%;
+        height:25px;
+        display:flex;
+        justify-content: space-around;
+        margin-left:0%;
+        margin-top:8px;
+        opacity:0;
+        transition:all .3s ease-in-out;
+    }
+    .navigation-mobile-socials.active-social-nav{
+        width:70%;
+        margin-left:15%;
+        opacity:1;
+    }
+    .mobile-social{
+        width:100%;
+        height:100%;
+        position:relative;
+    }
+    .mobile-social img{
+        width:25px;
+        height:25px;
+        transition:all .3s ease-in-out ;
+        transform: rotate(-45deg);
+    }
+    .mobile-social img:hover{
+        transform:scale(1.2) rotate(-45deg);
+    }
+    .mobile-social:nth-child(1) > img{
+        transform: scale(0.8);
+    }
+    .mobile-social:nth-child(1) > img:hover{
+        transform: scale(1) rotate(-45deg);
+    }
+    .qa-title {
+        color: var(--white75);
+        font-size: 22px;
+        width: calc(100% - 25px);
+    }
+    .qa-icon {
+        width: 18px;
+        height: 18px;
+        padding-top: 3px;
+    }
+    .qa-icon-plus {
+        height: 18px;
+        margin-top: -9px;
+    }
+    .qa-icon-minus {
+        width: 18px;
+        margin-top: -1px;
+    }
 }
 
 @media only screen and (max-width:600px){
+    .project {
+        width: 430px;
+        height: 230px;
+        position: relative;
+    }
+    .project img{
+        width:100%;
+        height:100%;
+    }
+    .close-btn {
+        top: 0px;
+        position: absolute;
+        right: 0px;
+        transition:all .3s ease-in-out;
+    }
+    .close-btn.nav-active {
+        display: inherit;
+        opacity: 1;
+        transition: all .3s ease-in-out;
+        top:20px;
+    }
+    .header-text1 h2 {
+        font-size: 40px;
+        margin-bottom: 32px;
+    }
+    .header-text2 h1 {
+        font-size: 45px;
+    }
+    .header-text3 p {
+        font-size: 22px;
+        margin-bottom: 32px;
+    }
+
+    .btn-poznajmy-sie-a p {
+        font-size: 20px;
+    }
+    .btn-poznajmy-sie-a i {
+        font-size: 20px;
+    }
+    .btn-poznajmy-sie-a {
+        padding: 13px 26px;
+    }
+    .tittle-of-section {
+        font-size: 48px;
+        margin-bottom:64px;
+    }
+    .aboutme-content {
+        margin: 0px 25px;
+    }
+    .spec-box h3 {
+        font-size: 28px;
+        margin: 16px 32px 0px;
+    }
+    .spec-box p {
+        font-size: 21px;
+        margin: 36px 32px 0px;
+        line-height:normal;
+    }
+    .spec-box img {
+        width: 70px;
+        height: 70px;
+    }
+    .tools-content div {
+        width: 350px;
+        z-index: 5 !important;
+    }
+    .active-tool {
+        width: 200px !important;
+        height: 200px !important;
+        margin-top: -50px;
+        margin-left: -25px;
+    }
+    .tools-content div p {
+        font-size: 15px;
+    }
+    .tools-content div {
+        width: 400px;
+    }
+    .my-specializations {
+        padding:64px 0px 128px;
+    }
+    .spec-box{
+        width: 100%;
+        margin:0px 45px;
+    }
+    .specs-flex-box1-and2 {
+        margin:0px 45px;
+        max-width:100%;
+    }
+    .spec-box:nth-child(3) {
+        max-width: 100%;
+        height: 200px;
+        width:auto;
+        margin-top:32px;
+    }
+    .spec-box:nth-child(4) {
+        margin: 32px 45px 0px;
+        width: auto;
+        max-width: 100%;
+    }
+    .short-contact h3 {
+        font-size: 32px;
+    }
+    .short-contact h4 {
+        font-size: 28px;
+    }
+    .sc-mail {
+        margin-top: 32px;
+        margin-bottom:16px;
+    }
+    .sc-call a, .sc-mail a {
+        font-size: 21px;
+        margin-top: 16px;
+    }
+    .faq-section {
+        margin: 0px 32px;
+        padding-bottom: 120px;
+    }
+    .faq-section .tittle-of-section {
+        width: 100%;
+    }
+    .designing-tools p {
+        width:70%;
+        margin:0 auto;
+    }
+    form {
+        width: 80%;
+    }
+    .footer-content {
+        width: 90%;
+    }
+    .footer-content h2 {
+        font-size: 26px;
+        margin-top: 32px;
+    }
+    .footer-anchor {
+        margin-left: 16px;
+        width: fit-content;
+    }
+    .footer-anchor:nth-child(1){
+        margin-left: 0px;
+        width: fit-content;
+    }
+    .footer-nav {
+        margin: 64px auto 16px;
+    }
+    .footer-content .rights {
+        margin-top: 16px;
+    }
+    .faq-about-content p {
+    font-size: 21px;
+    }
+    .qa-title {
+    font-size: 21px;
+    }
+    .faq-about a {
+    border: 1px solid var(--main);
+    padding: 13px 26px;
+    border-radius: 8px;
+    color: var(--white75);
+    font-size: 21px;
+    transition: all .3s ease-in-out;
+    }
+    .possibility-contact h6 {
+    font-size: 21px;
+    }
+    .footer-content p {
+    font-size: 21px;
+    margin-top: 32px;
+}
+}
+
+@media only screen and (max-width:450px){
+    .tools-content div {
+    width: 350px;
+    }
+    .active-tool {
+        width: 200px !important;
+        height: 200px !important;
+        margin-top: -50px;
+        margin-left: -50px;
+    }
+    .header-content-abs {
+        width: 95%;
+        margin-left:-47.5%;
+        top:40%;
+    }
+    .header-text3 p {
+        font-size: 20px;
+        margin-bottom: 32px;
+    }
+    .header {
+        background-image: url(./img/header.png);
+        height: 800px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 12;
+    }
+}
+
+@media only screen and (max-width:350px){
 
 }
