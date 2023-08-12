@@ -1605,17 +1605,120 @@ footer{
         top:40%;
     }
     .header-text3 p {
-        font-size: 20px;
+        font-size: 15px;
         margin-bottom: 32px;
     }
     .header {
         background-image: url(./img/header.png);
-        height: 800px;
+        height: 100vh;
         width: 100%;
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 12;
     }
+    .my-specializations {
+    padding: 64px 0px 176px;
+    }
+    .header-text1 h2 {
+        font-size: 30px;
+    }
+    .header-text2 h1 {
+        font-size: 32px;
+    }
+    .btn-poznajmy-sie-a p {
+        font-size: 15px;
+    }
+    .about-aboutme p {
+        font-size: 18px;
+    }
+    .about-aboutme a {
+        font-size: 18px;
+    }
+    .tittle-of-section {
+        font-size: 35px;
+    }
+    .spec-box h3 {
+        font-size: 20px;
+        margin: 16px 32px 0px;
+    }
+    .spec-box p {
+        font-size: 15px;
+        margin: 36px 32px 0px;
+    }
+    .spec-box img {
+        width: 100px;
+        height: 100px;
+    }
+    .short-contact h3 {
+        font-size: 32px;
+        font-weight: 100;
+    }
+    .faq-section .tittle-of-section {
+        width: 100%;
+        text-align:center;
+    }
+    .faq-about-content p {
+        font-size: 21px;
+        text-align:center;
+    }
+    .faq-about-content {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .faq-about-a {
+        width: 100%;
+        margin-top: 48px;
+        text-align:center;
+    }
+    .faq-about a {
+        text-align:center;
+        margin:0 auto;
+    }
+    .possibility-contact h6 {
+        font-size: 24px;
+    }
+    .ornament-div-contact {
+        margin: 16px 0px 32px;
+    }
+    form {
+        width: 100%;
+    }
+    .footer-content h3 {
+        font-size: 34px;
+    }
+    .footer-content h2 {
+        font-size: 24px;
+    }
+    .footer-content p {
+        font-size: 18px;
+        margin-top: 32px;
+    }
+    .footer-nav {
+        margin: 32px auto 32px;
+        flex-direction:column;
+        text-align: center;
+    }
+    .footer-anchor {
+        margin:4px auto;
+    }
+    .footer-anchor.active .underscore-active {
+        margin-top: 2px;
+    }
+    .footer-content .rights {
+        margin-top: 8px;
+    }
+    footer {
+        width: 100%;
+        padding-bottom: 8px;
+    }
+    .project {
+        width: 300px;
+        height: 190px;
+        position: relative;
+        margin: 64px auto 0px;
+    }
+    
+
 }
 
 @media only screen and (max-width:350px){
