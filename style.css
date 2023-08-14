@@ -1717,10 +1717,72 @@ footer{
         position: relative;
         margin: 64px auto 0px;
     }
+    .tittle-of-section {
+    margin-bottom: 48px;
+}
     
 
 }
 
 @media only screen and (max-width:350px){
+    .tools-content div {
+        width: 300px;
+    }
+    .contact-front-section {
+        margin: 0 10px;
+    }
+    .sc-call a, .sc-mail a {
+        font-size: 18px;
+        margin-top: 16px;
+    }
+    .navigation-mobile-socials.active-social-nav {
+        width: 70%;
+        margin-left: 30%;
+        opacity: 1;
+    }
+    .close-btn.nav-active {
+        display: inherit;
+        opacity: 1;
+        transition: all .3s ease-in-out;
+        top: 90px;
+    }
+    .active-tool {
+        width: 150px !important;
+        height: 150px !important;
+        margin-top: -25px;
+        margin-left: -25px;
+    }
+    .btn-poznajmy-sie-a i {
+        font-size: 16px;
+        margin-top: 0px;
+    }
+    .tittle-of-section {
+        font-size: 30px;
+    }
+    .header-text3{
+        width:90%;
+        margin: 0 auto;
+    }
+    .specs-flex-box1-and2 {
+        margin: 0px 15px;
+    }
+    .spec-box {
+        margin: 0px 15px;
+    }
+    .spec-box:nth-child(4) {
+        margin: 32px 15px 0px;
+    }
+    .short-contact h3 {
+        font-size: 28px;
+    }
+    .short-contact h4 {
+        font-size: 26px;
+    }
+    .project {
+        width: 280px;
+        height: 190px;
+        position: relative;
+        margin: 64px auto 0px;
+    }
 
 }
