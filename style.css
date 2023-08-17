@@ -117,6 +117,9 @@ body{
     color:var(--main);
     margin-top:8px;
 }
+.navigation-mobile{
+    display:none;
+}
 
 
 
@@ -385,7 +388,7 @@ body{
     left:0;
     width:300px !important;
     height:300px !important;
-    background:linear-gradient(to left,  var(--secound), var(--secound));
+    background:linear-gradient(to left,  var(--main), var(--main));
     margin-top:-100px;
     margin-left:-50px;
     transform:rotate(45deg) !important;
@@ -599,7 +602,7 @@ body{
 
 .project-info:hover{
     background: hsla(0,0%,0%,0.85);
-    border:1px solid var(--secound);
+    border:1px solid var(--main);
     box-shadow: 0px 0px 5px var(--main);
 }
 .project-info:hover >p{
@@ -805,7 +808,7 @@ body{
     width:100%;
     margin-top:8px;
     height:2px;
-    background:linear-gradient(to right, var(--secound), var(--secound), var(--Dark-main), var(--Dark-main), var(--Dark-main), var(--secound), var(--secound) )
+    background:linear-gradient(to right, var(--main), var(--main), var(--Dark-main), var(--Dark-main), var(--Dark-main), var(--main), var(--main) )
 }
 .type-of-contact{
     display:flex;
@@ -855,8 +858,8 @@ form{
     outline: none;
 }
 .form-box input:focus{
-    border:1px solid var(--secound);
-    color:var(--secound) ;
+    border:1px solid var(--main);
+    color:var(--main) ;
 }
 .form-box textarea{
     width:100%;
@@ -879,8 +882,8 @@ form{
     color:var(--white50);
 }
 .form-box textarea:focus{
-    border:1px solid var(--secound);
-    color:var(--secound);
+    border:1px solid var(--main);
+    color:var(--main);
 }
 form label{
     color:#fff;
@@ -892,7 +895,7 @@ form label input{
 /* Footer */
 footer{
     width:100%;
-    padding-bottom:24px;
+    padding-bottom:16px;
 }
 .footer-content{
     width:40%;
@@ -963,7 +966,7 @@ footer{
 .footer-content .rights{
     color:var(--white75);
     font-size:15px;
-    margin-top:24px;
+    margin-top:8px;
 }
 
 @media only screen and (max-width:1667px){
@@ -1169,8 +1172,16 @@ footer{
 }
 
 }
-
+@media only screen and (max-width:920px){
+    .header{
+        min-height:700px;
+    }
+}
 @media only screen and (max-width:800px){
+    
+    .header{
+        min-height:600px;
+    }
     .desk-nav{
         display:none;
     }
@@ -1180,6 +1191,7 @@ footer{
         left:0%;
         width:100%;
         z-index:20;
+        display:inline;
     }
     .navigation-mobile-content-rel{
         width:fit-content;
@@ -1235,7 +1247,7 @@ footer{
         margin-right:4px;
     }
     .mobile-anchor.active-anchor a{
-        color:var(--secound);
+        color:var(--main);
     }
     .navigation-mobile-icons{
         top:20px;
@@ -1417,6 +1429,25 @@ footer{
 }
 
 @media only screen and (max-width:600px){
+    .header{
+        height:800px;
+    }
+    .project-info {
+    }
+    .project-info p {
+        font-size: 30px;
+        margin-top: 50px;
+    }
+    .project-info p:nth-child(2) {
+        font-size: 21px;
+        margin: 16px auto 32px;
+    }
+    .project-info a p {
+        font-size: 18px;
+    }
+    .project-info a i {
+        font-size: 18px;
+    }
     .project {
         width: 430px;
         height: 230px;
@@ -1590,8 +1621,18 @@ footer{
 }
 
 @media only screen and (max-width:450px){
+    .project-info p {
+        font-size: 25px;
+        margin-top: 25px;
+    }
+    .project-info p:nth-child(2) {
+        font-size: 18px;
+    }
+    .btn-poznajmy-sie-a i {
+    margin-top:0px;
+}
     .tools-content div {
-    width: 350px;
+        width: 350px;
     }
     .active-tool {
         width: 200px !important;
@@ -1602,11 +1643,11 @@ footer{
     .header-content-abs {
         width: 95%;
         margin-left:-47.5%;
-        top:40%;
+        top:55%;
     }
     .header-text3 p {
         font-size: 15px;
-        margin-bottom: 32px;
+        margin-bottom: 0px;
     }
     .header {
         background-image: url(./img/header.png);
@@ -1615,12 +1656,17 @@ footer{
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 12;
+        background-position:50% 100%;
     }
     .my-specializations {
-    padding: 64px 0px 176px;
+        padding: 64px 0px 176px;
+    }
+    .btn-poznajmy-sie {
+        margin:128px auto 0;
     }
     .header-text1 h2 {
         font-size: 30px;
+        margin-bottom: 64px;
     }
     .header-text2 h1 {
         font-size: 32px;
@@ -1719,8 +1765,23 @@ footer{
     }
     .tittle-of-section {
     margin-bottom: 48px;
-}
-    
+    }
+    .more-realization {
+        margin:0 auto 120px;
+    }
+    .close-btn.nav-active {
+        display: inherit;
+        opacity: 1;
+        transition: all .3s ease-in-out;
+        top: 70px;
+    }
+    .navigation-mobile-content.active {
+        margin-left:-25px;
+    }
+    .navigation-mobile-socials.active-social-nav {
+        width: 70%;
+        margin-left: 25%;
+    }
 
 }
 
@@ -1736,8 +1797,8 @@ footer{
         margin-top: 16px;
     }
     .navigation-mobile-socials.active-social-nav {
-        width: 70%;
-        margin-left: 30%;
+        width: 60%;
+        margin-left: 40%;
         opacity: 1;
     }
     .close-btn.nav-active {
@@ -1783,6 +1844,15 @@ footer{
         height: 190px;
         position: relative;
         margin: 64px auto 0px;
+    }
+    .faq-section {
+        margin: 0px 24px;
+    }
+    .faq-about-content p {
+        font-size: 18px;
+    }
+    .faq-about a {
+        font-size: 18px;
     }
 
 }
