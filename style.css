@@ -713,7 +713,7 @@ body{
     border:1px solid var(--main);
     padding:16px 32px;
     border-radius:8px;
-    color:var(--main);
+    color:white;
     font-size:21px;
     transition:all .3s ease-in-out;
 }
@@ -886,12 +886,44 @@ form{
     color:var(--main);
 }
 form label{
+    cursor:pointer;
     color:#fff;
     font-size:13px;
 }
 form label input{
     margin-right:8px;
 }
+.button-send-form{
+    width:100%;
+    height:fit-content;
+    background:var(--main);
+    width:100%;
+    text-align:center;
+    color:var(--Dark-main);
+    border:none;
+    cursor: pointer;
+    padding:16px 0px;
+    margin-top:16px;
+    border-radius:8px;
+    font-size:18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    align-items: center;
+    position:relative;
+    
+}
+.button-send-form:hover{
+    background: hsl(180, 80%, 50%);
+}
+.button-send-form img{
+    top:50%;
+    position:absolute;
+    transform: translate(0,-50%);
+}
+
+
+
+
 /* Footer */
 footer{
     width:100%;
@@ -1432,8 +1464,7 @@ footer{
     .header{
         height:800px;
     }
-    .project-info {
-    }
+    
     .project-info p {
         font-size: 30px;
         margin-top: 50px;
