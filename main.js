@@ -1,8 +1,11 @@
 let tittleOfSection=document.querySelectorAll('.tittle-of-section')
+let qaQuestion=document.querySelectorAll('.qa-question')
+let qaAnswer=document.querySelectorAll('.qa-answer')
 let navigationMobile=document.querySelector('.navigation-mobile-content')
 let navigationBtn=document.querySelector('.navigation-btn')
 let closeBtn=document.querySelector('.close-btn')
 let navSocials=document.querySelector('.navigation-mobile-socials')
+
 
 
 
@@ -13,6 +16,9 @@ const tlInitial=new TimelineMax();
 tlInitial.to('.tittle-of-section',0,{opacity:0})
 
 $(document).ready(function(){
+
+    console.log(qaQuestion);
+
     let controller=new ScrollMagic.Controller();
     let navScene=new ScrollMagic.Scene({
         triggerElement:'.header',
@@ -63,6 +69,8 @@ $(document).ready(function(){
         }
             
     })
+
+
 
 
 });
