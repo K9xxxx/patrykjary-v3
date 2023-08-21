@@ -19,6 +19,10 @@ $(document).ready(function(){
 
     console.log(qaQuestion);
 
+    qaQuestion[0].addEventListener('click',()=>{
+        qaAnswer[0].classList.add('active')
+    })
+
     let controller=new ScrollMagic.Controller();
     let navScene=new ScrollMagic.Scene({
         triggerElement:'.header',
