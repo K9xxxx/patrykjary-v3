@@ -1,10 +1,12 @@
 let tittleOfSection=document.querySelectorAll('.tittle-of-section')
-let qaQuestion=document.querySelectorAll('.qa-question')
+let qaQuestion=document.querySelectorAll('.qa')
 let qaAnswer=document.querySelectorAll('.qa-answer')
+let qaiIconPlus=document.querySelectorAll('.qa-icon-plus')
 let navigationMobile=document.querySelector('.navigation-mobile-content')
 let navigationBtn=document.querySelector('.navigation-btn')
 let closeBtn=document.querySelector('.close-btn')
 let navSocials=document.querySelector('.navigation-mobile-socials')
+let activeTool=document.querySelector('.active-tool')
 
 
 
@@ -13,15 +15,58 @@ let navSocials=document.querySelector('.navigation-mobile-socials')
 const tlInitial=new TimelineMax();
 
 
+
 tlInitial.to('.tittle-of-section',0,{opacity:0})
 
 $(document).ready(function(){
 
-    console.log(qaQuestion);
 
+    //Do zmiany ten blok
     qaQuestion[0].addEventListener('click',()=>{
-        qaAnswer[0].classList.add('active')
+        if(qaQuestion[0].classList.contains('qa-Active')){
+            qaQuestion[0].classList.remove('qa-Active')
+        }
+        else{
+            qaQuestion[0].classList.add('qa-Active')
+            qaQuestion[1].classList.remove('qa-Active')
+            qaQuestion[2].classList.remove('qa-Active')
+            qaQuestion[3].classList.remove('qa-Active')
+        }
     })
+    qaQuestion[1].addEventListener('click',()=>{
+        if(qaQuestion[1].classList.contains('qa-Active')){
+            qaQuestion[1].classList.remove('qa-Active')
+        }
+        else{
+            qaQuestion[1].classList.add('qa-Active')
+            qaQuestion[0].classList.remove('qa-Active')
+            qaQuestion[2].classList.remove('qa-Active')
+            qaQuestion[3].classList.remove('qa-Active')
+        }
+    })
+    qaQuestion[2].addEventListener('click',()=>{
+        if(qaQuestion[2].classList.contains('qa-Active')){
+            qaQuestion[2].classList.remove('qa-Active')
+        }
+        else{
+            qaQuestion[2].classList.add('qa-Active')
+            qaQuestion[0].classList.remove('qa-Active')
+            qaQuestion[1].classList.remove('qa-Active')
+            qaQuestion[3].classList.remove('qa-Active')
+        }
+    })
+    qaQuestion[3].addEventListener('click',()=>{
+        if(qaQuestion[3].classList.contains('qa-Active')){
+            qaQuestion[3].classList.remove('qa-Active')
+        }
+        else{
+            qaQuestion[3].classList.add('qa-Active')
+            qaQuestion[0].classList.remove('qa-Active')
+            qaQuestion[1].classList.remove('qa-Active')
+            qaQuestion[2].classList.remove('qa-Active')
+        }
+    })
+
 
     let controller=new ScrollMagic.Controller();
     let navScene=new ScrollMagic.Scene({
