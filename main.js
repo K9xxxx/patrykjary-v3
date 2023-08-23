@@ -21,7 +21,35 @@ tlInitial.to('.tittle-of-section',0,{opacity:0})
 $(document).ready(function(){
 
 
-    //Do zmiany ten blok
+    document.querySelector('.programming-tools').addEventListener('click',()=>{
+        if (document.querySelector('.active-tool').classList.contains('right-tool'))
+        {
+            document.querySelector('.active-tool').classList.remove('right-tool')
+            document.querySelector('.programming-tools').classList.add('active-tools')
+            document.querySelector('.designing-tools').classList.remove('active-tools')
+            document.querySelector('.my-tools-programming').classList.add('my-active-tools')
+            document.querySelector('.my-tools-designing').classList.remove('my-active-tools')
+        }
+        else{
+            return 0;
+        }
+    })
+    document.querySelector('.designing-tools').addEventListener('click',()=>{
+        if (document.querySelector('.active-tool').classList.contains('right-tool'))
+        {
+            return 0;
+        }
+        else{
+            document.querySelector('.active-tool').classList.add('right-tool')
+            document.querySelector('.programming-tools').classList.remove('active-tools')
+            document.querySelector('.designing-tools').classList.add('active-tools')
+            document.querySelector('.my-tools-programming').classList.remove('my-active-tools')
+            document.querySelector('.my-tools-designing').classList.add('my-active-tools')
+        }
+    })
+
+
+    //Do zmiany ten blok, który mowi o wysuwaniu odpowiedzi do pytan w sekcji Q&A
     qaQuestion[0].addEventListener('click',()=>{
         if(qaQuestion[0].classList.contains('qa-Active')){
             qaQuestion[0].classList.remove('qa-Active')
