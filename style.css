@@ -515,6 +515,8 @@ body::-webkit-scrollbar {
     left:100px;
     width:100px !important;
     height:100px !important;
+    cursor:pointer;
+    animation: border-animation 5s infinite linear;
 }
 .square-ornament-relative{
     width:90px !important;
@@ -523,18 +525,27 @@ body::-webkit-scrollbar {
     border:2px solid var(--secound);
     background-color: none;
     transform:rotate(45deg);
+    
+}
+@keyframes border-animation {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
 }
 .SOR-small{
-    width:70px !important;
-    height:70px !important;
+    width:90px !important;
+    height:90px !important;
     margin:0 auto;
     border:2px solid var(--secound);
     position:absolute;
     top:50%;
     left:50%;
-    margin-left:-35px;
-    margin-top:-35px;
-    transform:rotate(0deg);
+    margin-left:-45px;
+    margin-top:-45px;
+    transform:scale(0.8) rotate(0deg);
 }
 
 .short-contact{
