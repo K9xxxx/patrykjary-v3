@@ -1,4 +1,5 @@
 let tittleOfSection=document.querySelectorAll('.tittle-of-section')
+let aboutMeP=document.querySelectorAll('.about-aboutme p')
 let qaQuestion=document.querySelectorAll('.qa')
 let qaAnswer=document.querySelectorAll('.qa-answer')
 let qaiIconPlus=document.querySelectorAll('.qa-icon-plus')
@@ -13,14 +14,43 @@ let activeTool=document.querySelector('.active-tool')
 
 
 const tlInitial=new TimelineMax();
+let tl=new TimelineMax();
 
 
 
 tlInitial.to('.tittle-of-section',0,{opacity:0})
 
 $(document).ready(function(){
+    let tl=new TimelineMax();
+
+    document.querySelector('.square-ornament-absolute').addEventListener('click',()=>{
+        console.log('test')
+        tl.to('.square-ornament-absolute',1,{x:300})
+    })
 
 
+    document.querySelector('.square-ornament-absolute').addEventListener('click',()=>{
+        if(document.querySelector('.square-ornament-absolute').classList.contains('active-orna'))
+        {
+            document.querySelector('.square-ornament-absolute').classList.remove('active-orna') 
+            document.querySelector('.square-ornament-absolute.right-side').classList.add('active-orna') 
+        }
+        else{
+            return 0;
+        }
+
+    })
+    document.querySelector('.square-ornament-absolute.right-side').addEventListener('click',()=>{
+        if(document.querySelector('.square-ornament-absolute.right-side').classList.contains('active-orna'))
+        {
+            document.querySelector('.square-ornament-absolute.right-side').classList.remove('active-orna') 
+            document.querySelector('.square-ornament-absolute').classList.add('active-orna') 
+        }
+        else{
+            return 0;
+        }
+
+    })
     document.querySelector('.programming-tools').addEventListener('click',()=>{
         if (document.querySelector('.active-tool').classList.contains('right-tool'))
         {
@@ -108,6 +138,23 @@ $(document).ready(function(){
     .setClassToggle('.desk-nav','active-nav')
     .addTo(controller);
 
+    let aboutMeOrna=new ScrollMagic.Scene({
+        triggerElement:'.aboutme-content',
+        triggerHook:'0.8',
+        reverse:true
+    })
+    .addIndicators()
+    .setClassToggle('.orna-aboutme','active-orna-aboutme')
+    .addTo(controller);
+
+    let shortContact=new ScrollMagic.Scene({
+        triggerElement:'.short-contact',
+        triggerHook:'0.6'
+    })
+    .addIndicators()
+    .setClassToggle('.short-contact','active-short-contact')
+    .addTo(controller);
+
 
     $(tittleOfSection).each(function(){
 
@@ -119,6 +166,16 @@ $(document).ready(function(){
         })
         .addIndicators()
         .setClassToggle(this,'active-tittle')
+        .addTo(controller);
+    })
+    $(aboutMeP).each(function(){
+
+        let aboutMePar=new ScrollMagic.Scene({
+            triggerElement: this,
+            triggerHook:'0.88',
+        })
+        .addIndicators()
+        .setClassToggle(this,'active-aboutpar')
         .addTo(controller);
     })
 

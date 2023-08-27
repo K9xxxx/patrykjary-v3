@@ -238,10 +238,20 @@ body::-webkit-scrollbar {
 }
 .orna-aboutme{
     border:16px solid var(--secound);
+    transform:rotate(-45deg);
+    width:300px;
+    height:300px;
+    margin:-150px auto 0;
+    transition:all .5s ease-in-out;
+    opacity:0
+}
+.orna-aboutme.active-orna-aboutme{
+    border:16px solid var(--secound);
     transform:rotate(45deg);
     width:300px;
     height:300px;
     margin:-150px auto 0;
+    opacity:1;
 }
 .aboutme-content-flex{
     display:flex;
@@ -297,6 +307,13 @@ body::-webkit-scrollbar {
     margin-bottom:32px;
     width:75%;
     margin:0 auto 32px;
+    opacity:0;
+    transition:opacity .3s ease-in-out;
+    
+}
+.about-aboutme p.active-aboutpar{
+    opacity:1;
+
 }
 .about-aboutme p:nth-child(4){
     margin:0 auto 8px;
@@ -321,6 +338,8 @@ body::-webkit-scrollbar {
 .my-specializations{
     background-color: var(--Dark-main);
     padding:128px 90px;
+    max-width:100vw;
+    overflow: hidden;
 }
 .specs-flex-box1-and2{
     display:flex;
@@ -509,7 +528,8 @@ body::-webkit-scrollbar {
     opacity:1;
 }
 
-.square-ornament-absolute{
+.square-ornament-absolute.active-orna{
+    opacity:1;
     position:absolute;
     top:0;
     left:100px;
@@ -517,6 +537,40 @@ body::-webkit-scrollbar {
     height:100px !important;
     cursor:pointer;
     animation: border-animation 5s infinite linear;
+}
+.square-ornament-absolute{
+    opacity:0;
+    position:absolute;
+    top:0;
+    left:-1000px;
+    width:100px !important;
+    height:100px !important;
+    cursor:pointer;
+    animation: border-animation 5s infinite linear;
+    transition:all .3s ease-in-out;
+}
+.square-ornament-absolute.right-side.active-orna{
+    opacity:1;
+    position:absolute;
+    top:0;
+    right:100px;
+    left:auto;
+    width:100px !important;
+    height:100px !important;
+    cursor:pointer;
+    animation: border-animation 5s infinite linear;
+}
+.square-ornament-absolute.right-side{
+    opacity:0;
+    position:absolute;
+    top:0;
+    right:-1000px;
+    left:auto;
+    width:100px !important;
+    height:100px !important;
+    cursor:pointer;
+    animation: border-animation 5s infinite linear;
+    transition:all .3s ease-in-out;
 }
 .square-ornament-relative{
     width:90px !important;
@@ -530,9 +584,15 @@ body::-webkit-scrollbar {
 @keyframes border-animation {
   0% {
     transform: rotate(45deg);
+    top:200px;
+  }
+  50%  {
+    top:0px;
   }
   100% {
     transform: rotate(405deg);
+    top:200px;
+    
   }
 }
 .SOR-small{
@@ -553,15 +613,23 @@ body::-webkit-scrollbar {
     height:auto;
     background: var(--Dark-main);
 }
-.sc-border-top{
+.short-contact.active-short-contact .sc-border-top,
+.short-contact.active-short-contact .sc-border-bottom{
     width:100%;
+}
+.sc-border-top{
+    width:0%;
     height:2px;
     background:var(--secound);
+    transition:all .5s ease-in-out;
 }
 .sc-border-bottom{
-    width:100%;
+    position:relative;
+    width:0%;
     height:2px;
     background:var(--secound);
+    float: right;
+    transition:all .5s ease-in-out;
 }
 .short-contact h3{
     font-size:48px;
