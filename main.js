@@ -1,4 +1,6 @@
 let tittleOfSection=document.querySelectorAll('.tittle-of-section')
+let SpecBox=document.querySelectorAll('.spec-box')
+let project=document.querySelectorAll('.project')
 let aboutMeP=document.querySelectorAll('.about-aboutme p')
 let qaQuestion=document.querySelectorAll('.qa')
 let qaAnswer=document.querySelectorAll('.qa-answer')
@@ -23,12 +25,7 @@ tlInitial.to('.tittle-of-section',0,{opacity:0})
 $(document).ready(function(){
     let tl=new TimelineMax();
 
-    document.querySelector('.square-ornament-absolute').addEventListener('click',()=>{
-        console.log('test')
-        tl.to('.square-ornament-absolute',1,{x:300})
-    })
-
-
+    //animacje do animacji ozdoby 2xkwadratu w sekcji uzywanych narzędzi 
     document.querySelector('.square-ornament-absolute').addEventListener('click',()=>{
         if(document.querySelector('.square-ornament-absolute').classList.contains('active-orna'))
         {
@@ -51,6 +48,8 @@ $(document).ready(function(){
         }
 
     })
+
+    //animacje oraz działanie Narzędzi do programowania i designu
     document.querySelector('.programming-tools').addEventListener('click',()=>{
         if (document.querySelector('.active-tool').classList.contains('right-tool'))
         {
@@ -126,7 +125,14 @@ $(document).ready(function(){
     })
 
 
+
+    //Scrollmagic dla całej strony 
+    //Scrollmagic dla całej strony 
+    //Scrollmagic dla całej strony 
+    //Scrollmagic dla całej strony 
     let controller=new ScrollMagic.Controller();
+
+    //Scrollmagic animacja nawigacj desktopowej
     let navScene=new ScrollMagic.Scene({
         triggerElement:'.header',
         triggerHook:'0',
@@ -138,6 +144,7 @@ $(document).ready(function(){
     .setClassToggle('.desk-nav','active-nav')
     .addTo(controller);
 
+    //Scrollmagic dla animacji kwadratu mojej osoby 
     let aboutMeOrna=new ScrollMagic.Scene({
         triggerElement:'.aboutme-content',
         triggerHook:'0.8',
@@ -146,7 +153,16 @@ $(document).ready(function(){
     .addIndicators()
     .setClassToggle('.orna-aboutme','active-orna-aboutme')
     .addTo(controller);
+    let specTools=new ScrollMagic.Scene({
+        triggerElement:'.spec-tools',
+        triggerHook:'0.8',
+        reverse:true
+    })
+    .addIndicators()
+    .setClassToggle('.spec-tools','active-spec-tools')
+    .addTo(controller);
 
+    //Scrollmagic dla zmieniania szerokosci obramowan w short-contact
     let shortContact=new ScrollMagic.Scene({
         triggerElement:'.short-contact',
         triggerHook:'0.6'
@@ -155,7 +171,23 @@ $(document).ready(function(){
     .setClassToggle('.short-contact','active-short-contact')
     .addTo(controller);
 
+    let aboutMeA=new ScrollMagic.Scene({
+        triggerElement:'.about-aboutme a',
+        triggerHook:'0.88'
+    })
+    .addIndicators()
+    .setClassToggle('.about-aboutme a','active-aboutme-a')
+    .addTo(controller);
 
+    let moreRealizationButton=new ScrollMagic.Scene({
+        triggerElement:'.more-realization',
+        triggerHook:'0.88'
+    })
+    .addIndicators()
+    .setClassToggle('.more-realization','active-more-realization')
+    .addTo(controller);
+
+    //Scrollmagic dla animacji tematów sekcji
     $(tittleOfSection).each(function(){
 
         let tittleOfSectionScene=new ScrollMagic.Scene({
@@ -168,6 +200,18 @@ $(document).ready(function(){
         .setClassToggle(this,'active-tittle')
         .addTo(controller);
     })
+    $(project).each(function(){
+
+        let projectVar=new ScrollMagic.Scene({
+            triggerElement: this,
+            triggerHook:'0.88',
+        })
+        .addIndicators()
+        .setClassToggle(this,'active-project')
+        .addTo(controller);
+    })
+
+    //Scrollmagic dla opisu mojej osoby
     $(aboutMeP).each(function(){
 
         let aboutMePar=new ScrollMagic.Scene({
@@ -178,7 +222,21 @@ $(document).ready(function(){
         .setClassToggle(this,'active-aboutpar')
         .addTo(controller);
     })
+    $(SpecBox).each(function(){
 
+        let SpecBoxvar=new ScrollMagic.Scene({
+            triggerElement: this,
+            triggerHook:'0.88',
+        })
+        .addIndicators()
+        .setClassToggle(this,'active-spec-box')
+        .addTo(controller);
+    })
+
+
+    //Działanie Nawigacji mobilnej
+    //Działanie Nawigacji mobilnej
+    //Działanie Nawigacji mobilnej
     navigationBtn.addEventListener('click',()=>{
         if (navigationMobile.classList.contains('active')!==true){
             navigationBtn.classList.remove('nav-active')

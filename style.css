@@ -324,13 +324,16 @@ body::-webkit-scrollbar {
     margin:0 auto;
     font-size:21px;
     margin-bottom:80px;
-    transition:color .3s ease-in-out;
+    transition:all .3s ease-in-out;
+    opacity:0;
 }
 .about-aboutme a:hover{
     color:#fff;
-    
 }
 
+.about-aboutme a.active-aboutme-a{
+    opacity:1;
+}
 
 
 
@@ -355,6 +358,11 @@ body::-webkit-scrollbar {
     width:600px;
     height:300px;
     margin:40px 0px;
+    opacity:0;
+    transition:all .3s ease-in-out;
+}
+.spec-box.active-spec-box{
+    opacity:1;
 }
 .spec-box:nth-child(3){
     width:100%;
@@ -387,6 +395,11 @@ body::-webkit-scrollbar {
 
 .spec-tools{
     padding:128px 0px;
+    opacity:0;
+    transition:opacity .3s ease-in-out;
+}
+.spec-tools.active-spec-tools{
+    opacity:1;
 }
 .tools-content{
     position:relative;
@@ -690,11 +703,36 @@ body::-webkit-scrollbar {
     height:280px;
     position:relative;
     margin:0 10%;
+    opacity:0;
+    transition:all .3s ease-in-out;
+}
+.project:nth-child(1){
+    transform: translateX(-100px);
+}
+.project:nth-child(2){
+    transform: translateX(100px);
 }
 
 .project:nth-child(3){
     margin-top:90px;
     margin:90px auto 0px;
+    transform: translatey(100px);
+}
+
+.project.active-project:nth-child(1){
+    opacity:1;
+    transform: translateX(0px);
+}
+.project.active-project:nth-child(2){
+    opacity:1;
+    transform: translateX(0px);
+}
+
+.project.active-project:nth-child(3){
+    margin-top:90px;
+    margin:90px auto 0px;
+    opacity:1;
+    transform: translatey(0px);
 }
 .project-info{
     position:absolute;
@@ -775,6 +813,8 @@ body::-webkit-scrollbar {
     height:fit-content;
     margin-bottom:200px;
     border-radius: 8px;
+    opacity:0;
+    transition:all .3s ease-in-out;
 }
 .more-realization a{
     padding:16px 32px !important;
@@ -783,6 +823,10 @@ body::-webkit-scrollbar {
 .more-realization-content{
     display:flex;
     padding:16px 32px;
+
+}
+.more-realization.active-more-realization{
+    opacity:1;
 
 }
 .more-realization-content{
