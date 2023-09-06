@@ -5,6 +5,7 @@ let aboutMeP=document.querySelectorAll('.about-aboutme p')
 let qaQuestion=document.querySelectorAll('.qa')
 let qaAnswer=document.querySelectorAll('.qa-answer')
 let qaiIconPlus=document.querySelectorAll('.qa-icon-plus')
+let qA=document.querySelectorAll('.qa')
 let navigationMobile=document.querySelector('.navigation-mobile-content')
 let navigationBtn=document.querySelector('.navigation-btn')
 let closeBtn=document.querySelector('.close-btn')
@@ -187,6 +188,42 @@ $(document).ready(function(){
     .setClassToggle('.more-realization','active-more-realization')
     .addTo(controller);
 
+    let faqAboutContentP=new ScrollMagic.Scene({
+        triggerElement:'.faq-about-content',
+        triggerHook:'0.82',
+        reverse:false
+    })
+    .addIndicators()
+    .setClassToggle('.faq-about-content','faq-about-content-active')
+    .addTo(controller);
+
+    let faqAboutA=new ScrollMagic.Scene({
+        triggerElement:'.faq-about-a',
+        triggerHook:'0.82',
+        reverse:true
+    })
+    .addIndicators()
+    .setClassToggle('.faq-about-a','faq-about-a-active')
+    .addTo(controller);
+
+    let allTypesContacts=new ScrollMagic.Scene({
+        triggerElement:'.all-types-contacts',
+        triggerHook:'0.82',
+        reverse:true
+    })
+    .addIndicators()
+    .setClassToggle('.all-types-contacts','all-types-contacts-active')
+    .addTo(controller);
+    
+    let contactForm=new ScrollMagic.Scene({
+        triggerElement:'.contact-form',
+        triggerHook:'0.82',
+        reverse:true
+    })
+    .addIndicators()
+    .setClassToggle('.contact-form','contact-form-active')
+    .addTo(controller);
+
     //Scrollmagic dla animacji tematów sekcji
     $(tittleOfSection).each(function(){
 
@@ -200,6 +237,20 @@ $(document).ready(function(){
         .setClassToggle(this,'active-tittle')
         .addTo(controller);
     })
+
+    $(qA).each(function(){
+
+        let questionAndAnswer=new ScrollMagic.Scene({
+            triggerElement: this,
+            triggerHook:'0.82',
+            offset:1,
+            reverse:true
+        })
+        .addIndicators()
+        .setClassToggle(this,'qa-active')
+        .addTo(controller);
+    })
+
     $(project).each(function(){
 
         let projectVar=new ScrollMagic.Scene({
