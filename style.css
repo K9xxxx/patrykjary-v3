@@ -710,7 +710,7 @@ body::-webkit-scrollbar {
     transform: translateX(-100px);
 }
 .project:nth-child(2){
-    transform: translateX(100px);
+    transform: translateX(0px);
 }
 
 .project:nth-child(3){
@@ -729,8 +729,7 @@ body::-webkit-scrollbar {
 }
 
 .project.active-project:nth-child(3){
-    margin-top:90px;
-    margin:90px auto 0px;
+    margin:64px auto 0px;
     opacity:1;
     transform: translatey(0px);
 }
@@ -1335,6 +1334,12 @@ footer{
     .footer-content {
         width: 50%;
     }
+    .square-ornament-absolute.active-orna{
+        left:20px;
+    }
+    .square-ornament-absolute.right-side.active-orna{
+        right:20px;
+    }
 
 }
 @media only screen and (max-width:1000px){
@@ -1445,6 +1450,12 @@ footer{
     margin: 0px 90px;
     padding-bottom: 120px;
 }
+.square-ornament-absolute.active-orna{
+    display:none;
+}
+.square-ornament-absolute.right-side.active-orna{
+    display:none;
+}
 
 }
 @media only screen and (max-width:920px){
@@ -1463,7 +1474,7 @@ footer{
     .navigation-mobile{
         position:fixed;
         top:0px;
-        left:0%;
+        left:-20px;
         width:100%;
         z-index:20;
         display:inline;
@@ -1527,7 +1538,7 @@ footer{
     .navigation-mobile-icons{
         top:20px;
         position:absolute;
-        right:20px;
+        right:0px;
         z-index:99 !important;
     }
     .navigation-btn{
@@ -2059,7 +2070,7 @@ footer{
         top: 70px;
     }
     .navigation-mobile-content.active {
-        margin-left:-25px;
+        margin-left:15px;
     }
     .navigation-mobile-socials.active-social-nav {
         width: 70%;
