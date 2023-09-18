@@ -133,7 +133,7 @@ $(document).ready(function(){
     //Scrollmagic dla całej strony 
     let controller=new ScrollMagic.Controller();
 
-    //Scrollmagic animacja nawigacj desktopowej
+    //Scrollmagic animacja nawigacji desktopowej
     let navScene=new ScrollMagic.Scene({
         triggerElement:'.header',
         triggerHook:'0',
@@ -149,15 +149,16 @@ $(document).ready(function(){
     let aboutMeOrna=new ScrollMagic.Scene({
         triggerElement:'.aboutme-content',
         triggerHook:'0.8',
-        reverse:true
+        reverse:false
     })
     .addIndicators()
     .setClassToggle('.orna-aboutme','active-orna-aboutme')
     .addTo(controller);
+
     let specTools=new ScrollMagic.Scene({
         triggerElement:'.spec-tools',
         triggerHook:'0.8',
-        reverse:true
+        reverse:false
     })
     .addIndicators()
     .setClassToggle('.spec-tools','active-spec-tools')
@@ -166,7 +167,8 @@ $(document).ready(function(){
     //Scrollmagic dla zmieniania szerokosci obramowan w short-contact
     let shortContact=new ScrollMagic.Scene({
         triggerElement:'.short-contact',
-        triggerHook:'0.6'
+        triggerHook:'0.6',
+        reverse:false
     })
     .addIndicators()
     .setClassToggle('.short-contact','active-short-contact')
@@ -174,7 +176,8 @@ $(document).ready(function(){
 
     let aboutMeA=new ScrollMagic.Scene({
         triggerElement:'.about-aboutme a',
-        triggerHook:'0.88'
+        triggerHook:'0.88',
+        reverse:false
     })
     .addIndicators()
     .setClassToggle('.about-aboutme a','active-aboutme-a')
@@ -182,7 +185,8 @@ $(document).ready(function(){
 
     let moreRealizationButton=new ScrollMagic.Scene({
         triggerElement:'.more-realization',
-        triggerHook:'0.88'
+        triggerHook:'0.88',
+        reverse:false
     })
     .addIndicators()
     .setClassToggle('.more-realization','active-more-realization')
@@ -200,7 +204,7 @@ $(document).ready(function(){
     let faqAboutA=new ScrollMagic.Scene({
         triggerElement:'.faq-about-a',
         triggerHook:'0.82',
-        reverse:true
+        reverse:false
     })
     .addIndicators()
     .setClassToggle('.faq-about-a','faq-about-a-active')
@@ -209,7 +213,7 @@ $(document).ready(function(){
     let allTypesContacts=new ScrollMagic.Scene({
         triggerElement:'.all-types-contacts',
         triggerHook:'0.82',
-        reverse:true
+        reverse:false
     })
     .addIndicators()
     .setClassToggle('.all-types-contacts','all-types-contacts-active')
@@ -218,7 +222,7 @@ $(document).ready(function(){
     let contactForm=new ScrollMagic.Scene({
         triggerElement:'.contact-form',
         triggerHook:'0.82',
-        reverse:true
+        reverse:false
     })
     .addIndicators()
     .setClassToggle('.contact-form','contact-form-active')
@@ -230,7 +234,6 @@ $(document).ready(function(){
         let tittleOfSectionScene=new ScrollMagic.Scene({
             triggerElement: this,
             triggerHook:'0.88',
-            offset:1,
             reverse:false
         })
         .addIndicators()
@@ -243,8 +246,7 @@ $(document).ready(function(){
         let questionAndAnswer=new ScrollMagic.Scene({
             triggerElement: this,
             triggerHook:'0.82',
-            offset:1,
-            reverse:true
+            reverse:false
         })
         .addIndicators()
         .setClassToggle(this,'qa-active')
@@ -256,6 +258,7 @@ $(document).ready(function(){
         let projectVar=new ScrollMagic.Scene({
             triggerElement: this,
             triggerHook:'0.88',
+            reverse:false
         })
         .addIndicators()
         .setClassToggle(this,'active-project')
@@ -268,6 +271,7 @@ $(document).ready(function(){
         let aboutMePar=new ScrollMagic.Scene({
             triggerElement: this,
             triggerHook:'0.88',
+            reverse:false
         })
         .addIndicators()
         .setClassToggle(this,'active-aboutpar')
@@ -278,6 +282,7 @@ $(document).ready(function(){
         let SpecBoxvar=new ScrollMagic.Scene({
             triggerElement: this,
             triggerHook:'0.88',
+            reverse:false
         })
         .addIndicators()
         .setClassToggle(this,'active-spec-box')
