@@ -141,7 +141,6 @@ $(document).ready(function(){
         reverse:true,
         duration:100
     })
-    .addIndicators()
     .setClassToggle('.desk-nav','active-nav')
     .addTo(controller);
 
@@ -151,7 +150,6 @@ $(document).ready(function(){
         triggerHook:'0.8',
         reverse:false
     })
-    .addIndicators()
     .setClassToggle('.orna-aboutme','active-orna-aboutme')
     .addTo(controller);
 
@@ -160,7 +158,6 @@ $(document).ready(function(){
         triggerHook:'0.8',
         reverse:false
     })
-    .addIndicators()
     .setClassToggle('.spec-tools','active-spec-tools')
     .addTo(controller);
 
@@ -170,7 +167,6 @@ $(document).ready(function(){
         triggerHook:'0.6',
         reverse:false
     })
-    .addIndicators()
     .setClassToggle('.short-contact','active-short-contact')
     .addTo(controller);
 
@@ -179,7 +175,6 @@ $(document).ready(function(){
         triggerHook:'0.88',
         reverse:false
     })
-    .addIndicators()
     .setClassToggle('.about-aboutme a','active-aboutme-a')
     .addTo(controller);
 
@@ -188,7 +183,6 @@ $(document).ready(function(){
         triggerHook:'0.88',
         reverse:false
     })
-    .addIndicators()
     .setClassToggle('.more-realization','active-more-realization')
     .addTo(controller);
 
@@ -197,7 +191,6 @@ $(document).ready(function(){
         triggerHook:'0.82',
         reverse:false
     })
-    .addIndicators()
     .setClassToggle('.faq-about-content','faq-about-content-active')
     .addTo(controller);
 
@@ -206,7 +199,6 @@ $(document).ready(function(){
         triggerHook:'0.82',
         reverse:false
     })
-    .addIndicators()
     .setClassToggle('.faq-about-a','faq-about-a-active')
     .addTo(controller);
 
@@ -215,7 +207,6 @@ $(document).ready(function(){
         triggerHook:'0.82',
         reverse:false
     })
-    .addIndicators()
     .setClassToggle('.all-types-contacts','all-types-contacts-active')
     .addTo(controller);
     
@@ -224,7 +215,6 @@ $(document).ready(function(){
         triggerHook:'0.82',
         reverse:false
     })
-    .addIndicators()
     .setClassToggle('.contact-form','contact-form-active')
     .addTo(controller);
 
@@ -236,7 +226,6 @@ $(document).ready(function(){
             triggerHook:'0.88',
             reverse:false
         })
-        .addIndicators()
         .setClassToggle(this,'active-tittle')
         .addTo(controller);
     })
@@ -248,7 +237,6 @@ $(document).ready(function(){
             triggerHook:'0.82',
             reverse:false
         })
-        .addIndicators()
         .setClassToggle(this,'qa-active')
         .addTo(controller);
     })
@@ -260,7 +248,6 @@ $(document).ready(function(){
             triggerHook:'0.88',
             reverse:false
         })
-        .addIndicators()
         .setClassToggle(this,'active-project')
         .addTo(controller);
     })
@@ -273,7 +260,6 @@ $(document).ready(function(){
             triggerHook:'0.88',
             reverse:false
         })
-        .addIndicators()
         .setClassToggle(this,'active-aboutpar')
         .addTo(controller);
     })
@@ -284,7 +270,6 @@ $(document).ready(function(){
             triggerHook:'0.88',
             reverse:false
         })
-        .addIndicators()
         .setClassToggle(this,'active-spec-box')
         .addTo(controller);
     })
