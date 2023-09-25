@@ -182,6 +182,7 @@ body::-webkit-scrollbar-thumb:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding-top:128px;
 }
 .realization-project{
     width:fit-content;
@@ -298,7 +299,9 @@ footer{
 }
 
 @media only screen and (max-width:1667px){
-    
+    .section-realization {
+        margin: 0px 128px;
+    }
 }
 
 
@@ -310,6 +313,20 @@ footer{
     .footer-content {
         width: 50%;
     }
+    .realization-image{
+        width:400px;
+        height:300px;
+    }
+    .realization-image img{
+        width:100%;
+        height:100%;
+    }
+    .section-realization {
+        margin: 0px 64px;
+    }
+    .realization-info {
+        margin-top: -32px;
+    }
 }
 
 @media only screen and (max-width:1000px){
@@ -318,6 +335,9 @@ footer{
     }
     .desk-nav.active-nav .nav-anchor {
         margin: 0 16px;
+    }
+    .section-realization-content article {
+        font-size: 21px;
     }
 }
 @media only screen and (max-width:920px){
@@ -487,6 +507,15 @@ footer{
     .section-realization {
         margin: 0px 64px;
     }
+    .section-realization-content {
+        padding-top: 128px;
+        padding-bottom: 64px;
+    }
+    .type-of-website{
+        margin-top:128px;
+        background: linear-gradient(to right, var(--Dark-main),var(--Dark-main), hsla(180, 61%, 50%,0.3),var(--main), hsla(180, 61%, 50%,0.3), var(--Dark-main),var(--Dark-main));
+        border-radius:100% 100% 100% 100%;
+    }
 }
 
 @media only screen and (max-width:600px){
@@ -537,6 +566,18 @@ footer{
         padding-top: 128px;
         padding-bottom: 64px;
     }
+    .section-realization-content article {
+        font-size: 18px;
+        margin:0 32px;
+    }
+    .type-of-website{
+        margin-top:128px;
+        background: linear-gradient(to right, var(--main), hsla(180, 61%, 50%,0.5), hsla(180, 61%, 50%,0.5) ,var(--main));
+        border-radius:0;
+    }
+    .section-realization {
+        margin: 0px 0px;
+    }
 }
 
 @media only screen and (max-width:450px){
@@ -583,7 +624,33 @@ footer{
         width: 70%;
         margin-left: 25%;
     }
+    .realization-image {
+        width: 350px;
+        height: 200px;
+    }
+    .realization-info p {
+        font-size: 23px;
+    }
+    .realization-info p:nth-child(2) {
+        font-size: 16px;
+    }
 
+    .section-realization-content article {
+        font-size: 16px;
+        margin: 0 16px;
+    }
+    .type-of-website {
+        margin-top: 64px;
+    }
+    .realization-project {
+        margin-bottom: 32px;
+    }
+    .realizations-full {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 64px;
+    }
 }
 
 @media only screen and (max-width:350px){
@@ -600,6 +667,10 @@ footer{
         top: 90px;
     }
     .section-realization {
-        margin: 0px 16px;
+        margin: 0px 0px;
+    }
+    .realization-image {
+        width: 300px;
+        height: 200px;
     }
 }
