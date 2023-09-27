@@ -33,11 +33,6 @@ url("./fonts/icofont.woff") format("woff");
   -webkit-font-smoothing: antialiased;
 }
 
-.icofont-arrow-right:before
-{
-  content: "\ea5d";
-}
-
 .icofont-location-arrow:before
 {
   content: "\ef78";
@@ -58,11 +53,6 @@ url("./fonts/icofont.woff") format("woff");
   content: "\ed36";
 }
 
-.icofont-twitter:before
-{
-  content: "\ed7a";
-}
-
 .icofont-arrow-down:before
 {
   content: "\ea5b";
@@ -76,6 +66,21 @@ url("./fonts/icofont.woff") format("woff");
 .icofont-close:before
 {
   content: "\eee4";
+}
+
+.icofont-arrow-right:before
+{
+  content: "\ea5d";
+}
+
+.icofont-twitter:before
+{
+  content: "\ed7a";
+}
+
+.icofont-paper-plane:before
+{
+  content: "\efb4";
 }
 
 [class^="icofont-"].icofont-duotone,
