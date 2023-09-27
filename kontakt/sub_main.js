@@ -17,14 +17,21 @@ $(document).ready(function(){
     let controller=new ScrollMagic.Controller();
 
     //Scrollmagic animacja nawigacji desktopowej
-    let navScene=new ScrollMagic.Scene({
-        triggerElement:'.header',
-        triggerHook:'0',
-        offset:0,
-        reverse:true,
-        duration:100
+
+    let SecName=new ScrollMagic.Scene({
+        triggerElement:'.section-name',
+        triggerHook:'.9',
+        reverse:false
     })
-    .setClassToggle('.desk-nav','active-nav')
+    .setClassToggle('.section-name','active')
+    .addTo(controller);
+
+    let possCont=new ScrollMagic.Scene({
+        triggerElement:'.all-possible-contact',
+        triggerHook:'.9',
+        reverse:false
+    })
+    .setClassToggle('.all-possible-contact','active')
     .addTo(controller);
 
 

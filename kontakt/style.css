@@ -154,12 +154,239 @@ body::-webkit-scrollbar-thumb:hover {
 .section-name h1{
     color: var(--main);
     font-size:41px;
+    opacity:0;
+    transition:opacity .3s ease-in-out;
+}
+.section-name.active h1{
+
+    opacity:1;
 }
 .section-name-border{
     height:2px;
-    width:150%;
+    width:0%;
     background: linear-gradient(to right, #036969, #06BFBF, #036969);
     margin-top:8px;
+    transition:all .5s ease-in-out;
+}
+.section-name.active .section-name-border{
+    width:150%;
+}
+.all-possible-contact{
+    padding:16px 32px;
+    border-left: 2px solid var(--main);
+    width:fit-content;
+    margin:128px auto 64px;
+    display:flex;
+    flex-direction: column;
+    opacity:0;
+    transition:opacity .3s ease-in-out;
+}
+
+.all-possible-contact.active{
+    opacity:1;
+}
+.type-of-contact {
+    margin:16px 0px;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+.type-of-contact a{
+    color:var(--white75);
+    font-size:20px;
+    margin-left:8px;
+    transition:color .3s ease-in-out;
+}
+.type-of-contact p{
+    color:var(--white75);
+    font-size:23px;
+    transition:color .3s ease-in-out;
+}
+.type-of-contact a img{
+    width:30px;
+    height:30px;
+}
+.contact-icons a i{
+    font-size:25px;
+    transition:color .3s ease-in-out;
+}
+.type-of-contact a:hover{
+    color:#fff;
+}
+.type-of-contact a:hover ~ p{
+    color:var(--main)
+}
+.type-of-contact .contact-icons:hover ~ p{
+    color:var(--main)
+}
+.contact-form-full{
+    width:70%;
+    margin:0 auto;
+    border:2px solid var(--main);
+    padding:32px;
+}
+.contact-form-full p{
+    font-size:35px;
+    text-align: center;
+    color:var(--main);
+}
+.contact-form{
+    margin:32px auto 0;
+    width:80%;
+}
+.form-box{
+    margin:16px auto 0;
+    text-align: center;
+    margin-top:16px;
+}
+
+.form-box input{
+    margin:0 auto;
+    width:100%;
+    font-size:18px;
+    padding:8px 16px;
+    border:1px solid var(--white50);
+    color: var(--white50);
+    background: var(--Dark-main);
+    outline: none;
+}
+.form-box input:focus{
+    border:1px solid var(--main);
+    color:var(--main) ;
+}
+.form-box textarea{
+    max-width:100%;
+    min-width:100%;
+    border:1px solid var(--white50);
+    background:var(--Dark-main);
+    font-size:18px;
+    padding:8px 16px;
+    outline:none;
+    color:var(--white50);
+}
+.form-box textarea:focus{
+    border:1px solid var(--main);
+    color:var(--main);
+}
+form label{
+    cursor:pointer;
+    color:#fff;
+    font-size:13px;
+}
+form label input{
+    margin-right:8px;
+}
+
+
+
+
+.icofont-paper-plane{
+    color:var(--main);
+    font-size:19px;
+}
+.contact-form-full form a {
+    position: relative;
+    display: inline-block;
+    padding: 20px 70px;
+    color: var(--main);
+    font-size: 19px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 2%;
+    font-weight: 400;
+    user-select: none;
+}
+.contact-form-full a:hover {
+    background: var(--main);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.contact-form-full a:hover>i{
+    color: black;
+}
+
+.contact-form-full a span {
+    position: absolute;
+    display: block;
+}
+.contact-form-full a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--main));
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+    left: -100%;
+    }
+    50%,
+    100% {
+    left: 100%;
+    }
+}
+
+.contact-form-full a span:nth-child(2) {
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--main));
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+    0% {
+    top: -100%;
+    }
+    50%,
+    100% {
+    top: 100%;
+    }
+}
+
+.contact-form-full a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--main));
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+    0% {
+    right: -100%;
+    }
+    50%,
+    100% {
+    right: 100%;
+    }
+}
+.contact-form-full a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--main));
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+    0% {
+    bottom: -100%;
+    }
+    50%,
+    100% {
+    bottom: 100%;
+    }
 }
 
 
@@ -262,6 +489,15 @@ footer{
     }
     .desk-nav.active-nav .nav-anchor {
         margin: 0 16px;
+    }
+    .type-of-contact p {
+        font-size: 21px;
+    }
+    .type-of-contact a {
+        font-size: 21px;
+    }
+    .contact-form-full {
+        width: 100%;
     }
 }
 @media only screen and (max-width:920px){
@@ -475,11 +711,23 @@ footer{
         margin-left:-25%;
     }
     .section-contact {
-        margin: 0px 32px;
+        margin: 0px 0px;
     }
     .section-contact-content {
         padding-top: 128px;
         padding-bottom: 64px;
+    }
+    .type-of-contact a {
+    font-size: 18px;
+    }
+    .type-of-contact p {
+        font-size: 18px;
+    }
+    .contact-form-full {
+        width: 100%;
+        border: 2px solid var(--main);
+        border-right: none;
+        border-left: none;
     }
 }
 
@@ -527,10 +775,32 @@ footer{
         width: 70%;
         margin-left: 25%;
     }
+    .type-of-contact a {
+        font-size: 16px;
+    }
+    .type-of-contact p {
+        font-size: 16px;
+    }
+    .all-possible-contact {
+        padding: 16px 16px;
+        margin: 64px auto;
+    }
+    .contact-form {
+        margin: 32px auto 0;
+        width: 95%;
+    }
+    .contact-form-full form a {
+        width:100%;
+        text-align: center;
+    }
 
 }
 
 @media only screen and (max-width:350px){
+    .all-possible-contact {
+        padding: 16px 8px;
+        margin: 64px auto;
+    }
 
     .navigation-mobile-socials.active-social-nav {
         width: 60%;
