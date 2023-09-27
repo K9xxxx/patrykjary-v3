@@ -155,17 +155,31 @@ body::-webkit-scrollbar-thumb:hover {
 .section-name h1{
     color: var(--main);
     font-size:41px;
+    transition:opacity .3s ease-in-out;
+    opacity:0;
 }
 .section-name-border{
+    transition:all .3s ease-in-out;
     height:2px;
-    width:150%;
+    width:0%;
     background: linear-gradient(to right, #036969, #06BFBF, #036969);
     margin-top:8px;
+}
+.section-name.active h1{
+    opacity:1;
+}
+.section-name.active .section-name-border{
+    width:150%;
 }
 .section-about-me-content article{
     color:var(--white75);
     margin-top:32px;
     font-size:23px;
+    opacity:0;
+    transition: opacity .3s ease-in-out;
+}
+.section-about-me-content article.active{
+    opacity:1;
 }
 
 /* Footer */
